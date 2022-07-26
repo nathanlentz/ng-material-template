@@ -1,0 +1,15 @@
+<div class="list-wrapper">
+  <div class="zone" drop (dropped)="onDrop($event)">Zone</div>
+  <div class="example-list">
+    <div
+      class="example-box"
+      *ngFor="let item of allItems"
+      [drag]="item"
+      [drop]="item"
+      [drop-collection]="allItems"
+      (dropped)="onDrop($event)"
+    >
+      <span>{{ item.name }}</span>
+    </div>
+  </div>
+</div>
